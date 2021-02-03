@@ -1,0 +1,11 @@
+-----BEGIN CERTIFICATE-----
+Сертификат
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
+Первая часть CA
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
+Вторая часть CA
+-----END CERTIFICATE-----

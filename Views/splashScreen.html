@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Framework 2</title>
+    <style>
+        html {
+            background-color: #1e1e1e;
+            font-size: 1vw;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .macbook {
+            width: 68.125em;
+        }
+
+        .display {
+            background-color: #000;
+            overflow: hidden;
+            width: 55.375em;
+            height: 36em;
+            margin: auto;
+            border-top-right-radius: 1.7em;
+            border-top-left-radius: 1.7em;
+            position: relative;
+        }
+
+        .display:before {
+            content: "";
+            width: .70em;
+            height: .70em;
+            background: #222;
+            position: absolute;
+            top: .40em;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 50%;
+        }
+
+        .display:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 28.125em solid rgba(255, 255, 255, 0.02);
+            border-left: 18.750em solid transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 150;
+        }
+
+        .display h1 {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-weight: 300;
+            position: absolute;
+            bottom: .5em;
+            left: 0;
+            right: 0;
+            line-height: 0;
+            color: #666;
+            font-size: .65em;
+            text-align: center;
+        }
+
+        .screen {
+            width: 94%;
+            height: 92%;
+            margin: auto;
+            position: absolute;
+            background: url(assets/images/logo-w.png) no-repeat center;
+            background-size: 35%;
+            z-index: 100;
+            top: 4%;
+            left: 3%;
+            border-radius: .2em;
+        }
+
+        .base {
+            height: 1.25em;
+            width: 68.125em;
+            background-color: #EFF0F4;
+            position: relative;
+        }
+
+        .base:after,
+        .base:before {
+            width: 4em;
+            height: 100%;
+            content: "";
+            top: 0;
+            right: 0;
+            position: absolute;
+            background: -webkit-gradient(linear, left top, right top, from(rgba(226, 228, 227, 0.35)), color-stop(51%, rgba(140, 141, 145, 0.35)), color-stop(99%, rgba(226, 228, 227, 0.35)), to(rgba(226, 228, 227, 0.35)));
+            background: linear-gradient(to right, rgba(226, 228, 227, 0.35) 0%, rgba(140, 141, 145, 0.35) 51%, rgba(226, 228, 227, 0.35) 99%, rgba(226, 228, 227, 0.35) 100%);
+        }
+
+        .base:before {
+            left: 0;
+        }
+
+        .bottom {
+            height: .55em;
+            width: 68m;
+            margin: auto;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(153, 154, 158, 0.75)), color-stop(90%, rgba(44, 45, 47, 0.6)));
+            background: linear-gradient(to bottom, rgba(153, 154, 158, 0.75) 30%, rgba(44, 45, 47, 0.6) 90%);
+            border-bottom-right-radius: 8em;
+            border-bottom-left-radius: 8em;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.05), 0 15px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .indent {
+            height: .75em;
+            width: 10em;
+            margin: auto;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(153, 154, 158, 0.75)), color-stop(90%, rgba(44, 45, 47, 0.6)));
+            background: linear-gradient(to bottom, rgba(153, 154, 158, 0.75) 30%, rgba(44, 45, 47, 0.6) 90%);
+            border-bottom-right-radius: 8em;
+            border-bottom-left-radius: 8em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="macbook">
+        <div class="display">
+            <div class="screen" style="background-color: #191919;"></div>
+            <div class="screen"></div>
+            <h1>Red Framework 2</h1>
+        </div>
+        <div class="base">
+            <div class="indent"></div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>
