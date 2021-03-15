@@ -7,7 +7,7 @@ const adminBro = new AdminBro({
     databases: [options.db.sequelize],
     rootPath: '/admin',
     branding: {
-        logo: '/assets/images/logo-w.png',
+        logo: '/assets/images/logo-a.png',
         companyName: 'RedFramework',
         softwareBrothers: false   // if Software Brothers logos should be shown in the sidebar footer
     },
