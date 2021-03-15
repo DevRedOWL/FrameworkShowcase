@@ -67,7 +67,7 @@ app.use('*', (req, res) => res.sendFile('/Views/Errors/404.html', { "root": opti
 
 /* Listen interfaces */
 options.init(async (err, data) => {
-    if (err) return console.error(err);
+    if (err && !options.state.debug) return console.error(err);
     else try {
         http.listen(options.port.http, function () {
             require('dns').lookup(require('os').hostname(), function (error, address, family) {
