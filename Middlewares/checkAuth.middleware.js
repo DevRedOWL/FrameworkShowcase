@@ -13,7 +13,6 @@ module.exports.checkAuthRedirect = (redirectTo) => (req, res, next) => {
 }
 
 module.exports.checkAuthAdmin = (req, res, next) => {
-    if (req.user)
-        return next();
-    else return res.status(401).send(new resModel.ErrorModel('Not an admin'));
+    if (req.user && req.user.isAdmin) return next();
+    else return res.status(403).send(new resModel.ErrorModel('User is not admin'));
 }

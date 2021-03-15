@@ -1,3 +1,4 @@
+const options = require('../options');
 const AdminBro = require('admin-bro');
 const AdminBroExpress = require('admin-bro-expressjs');
 const AdminBroSequelize = require('admin-bro-sequelize');
@@ -10,7 +11,7 @@ const adminBro = new AdminBro({
         logo: '/assets/images/logo-a.png',
         companyName: 'RedFramework',
         softwareBrothers: false   // if Software Brothers logos should be shown in the sidebar footer
-    },
+    }
 })
 
 module.exports = AdminBroExpress.buildRouter(adminBro);
