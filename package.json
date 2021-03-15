@@ -37,5 +37,8 @@
     "redis": "^3.0.2",
     "sequelize": "^6.3.5"
   },
+  "scripts": {
+    "checkEnv" : "node Utils/envIntegrityTool.js"
+  },
   "devDependencies": {}
 }

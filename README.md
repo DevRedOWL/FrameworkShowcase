@@ -20,6 +20,7 @@
 ```
 ### Installation
 > In progress
+
 ### Development
 > In progress
 
@@ -56,11 +57,13 @@
 - [ ] Create a route  
 - [ ] Create a controller  
 - [ ] Create a middlewre function  
+- [ ] Check integrity and update .env file
 
 ## Ideas
-- [ ] Add init script, divided frop options.js
+- [ ] Add init script, divided from options.js
 - [ ] Better routes requiring by one loader
 - [ ] Use rate-limit-redis
+- [ ] Add npm scripts for DB syncing
 
 ## Structure
 ```md

@@ -14,7 +14,7 @@ const forceSSL = require('express-force-ssl');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 // Utilities
-const log = require('./Modules/consoleModule');
+const log = require('./Utils/consoleModule');
 const enums = require('./enums');
 // Routers 
 const apiRouter = require('./Routes/api/index.routes');
