@@ -37,6 +37,7 @@
 - [x] Automatic safe migrations on launch
 - [x] Ability to chain init scripts
 - [x] Subdomains management
+- [ ] Features enable/disable system for development purposes
 - [ ] Logging subsystem  
 - [ ] Crash logging and error reports
 - [ ] Localization subsystem
@@ -57,7 +58,7 @@
 - [ ] Create a route  
 - [ ] Create a controller  
 - [ ] Create a middlewre function  
-- [ ] Check integrity and update .env file
+- [x] Check integrity of .env file and update data based on example
 
 ## Ideas
 - [ ] Add init script, divided from options.js

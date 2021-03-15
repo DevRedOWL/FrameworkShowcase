@@ -20,6 +20,7 @@ const enums = require('./enums');
 const apiRouter = require('./Routes/api/index.routes');
 const authRouter = require('./Routes/auth/index.routes');
 const clientRouter = require('./Routes/client/index.routes');
+const serviceRouter = require('./Routes/service/index.routes');
 // Middlewares
 const limiter = require('./Middlewares/limiter.middleware');
 const passport = require('./Middlewares/passport.middleware');
@@ -55,6 +56,8 @@ app.use(subdomain.middleware);
 app.use('/api', limiter.apiLimiter, apiRouter);
 // Auth
 app.use('/auth', limiter.authLimiter, authRouter);
+// Service
+app.use("/service", serviceRouter)
 // Client
 app.set('views', './Views');
 app.set('view engine', 'pug');

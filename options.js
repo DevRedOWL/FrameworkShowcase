@@ -45,8 +45,8 @@ exports.ssl = state.debug ? {} : {
 const Sequelize = require('sequelize'); // library for mapping models
 exports.db = {
     sync: {
-        allow_force: (process.env.NODE_SEQUELIZE_ALLOW_FORCE_SYNC === 'true'),
-        allow_alter: (process.env.NODE_SEQUELIZE_ALLOW_ALTER_SYNC === 'true')
+        allow_force: (process.env.NODE_SEQUELIZE_ALLOW_FORCE_SYNC.split(' ')[0] === 'true'),
+        allow_alter: (process.env.NODE_SEQUELIZE_ALLOW_ALTER_SYNC.split(' ')[0] === 'true')
     },
     sequelize: new Sequelize(
         process.env.NODE_SEQUELIZE_DB_NAME,

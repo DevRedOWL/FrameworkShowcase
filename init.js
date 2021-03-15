@@ -21,6 +21,7 @@ exports.initSequelize = (sequelizeInstance) => async (callback, ...next) => {
         if (next.length) next[0](callback, ...next.slice(1));
         else callback((null, 'Connection with DB has been established successfully.'));
     } catch (error) {
+        console.log('\x1b[1m\x1b[41m [InitScript]\x1b[0m\x1b[41m Unable to connect DB \x1b[0m');
         callback(error, null);
     }
 }
@@ -46,6 +47,7 @@ exports.syncDBTables = (modelsPath, syncParams) => async (callback, ...next) => 
         if (next.length) next[0](callback, ...next.slice(1));
         else callback((null, 'All DB tables were sync successfully.'));
     } catch (error) {
+        console.log('\x1b[1m\x1b[41m [InitScript]\x1b[0m\x1b[41m Sequelize DB syncronization failes \x1b[0m');
         callback(error, null);
     }
 }
@@ -58,6 +60,7 @@ exports.initMailer = (mailerInstance) => async (callback, ...next) => {
         if (next.length) next[0](callback, ...next.slice(1));
         else callback(null, 'NodeMailer has been started.');
     } catch (error) {
+        console.log('\x1b[1m\x1b[41m [InitScript]\x1b[0m\x1b[41m NodeMailer initialization error \x1b[0m');
         callback(error, null);
     }
 }

@@ -32,10 +32,10 @@ User.init(
     firstName: { type: DataTypes.STRING, allowNull: true },
     lastName: { type: DataTypes.STRING }, // allowNull defaults to true
     // User id fields
-    email: { type: DataTypes.STRING }, // Unique
-    vkontakteID: { type: DataTypes.STRING }, // Unique
-    facebookID: { type: DataTypes.STRING }, // Unique
-    googleID: { type: DataTypes.STRING }, // Unique
+    email: { type: DataTypes.STRING, unique: true }, // Unique
+    vkontakteID: { type: DataTypes.STRING, unique: true }, // Unique
+    facebookID: { type: DataTypes.STRING, unique: true }, // Unique
+    googleID: { type: DataTypes.STRING, unique: true }, // Unique
     // Auth things
     emailConfirmed: { type: DataTypes.BOOLEAN, defaultValue: 0 },
     passwordHash: { type: DataTypes.STRING },
@@ -47,7 +47,9 @@ User.init(
       set(value) {
         this.setDataValue('passwordHash', bcrypt.hashSync(`${value}`, 10));
       }
-    }
+    },
+    // Parameters
+    isAdmin: { type: DataTypes.BOOLEAN, defaultValue: 0 }
   },
   // Model parameters
   {
