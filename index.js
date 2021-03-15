@@ -11,6 +11,7 @@ const http = require('http').Server(app);
 const https = options.state.debug ? require('http').Server(app) : require('https').Server(options.ssl, app);
 const helmet = require('helmet');
 const forceSSL = require('express-force-ssl');
+const MySQLAdmin = require('node-mysql-admin');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 // Utilities
@@ -49,6 +50,8 @@ app.set('json spaces', 2);
 // Subdomainity
 app.set('subdomain offset', options.host.split('.').length)
 app.use(subdomain.middleware);
+// Admin panels
+app.use(MySQLAdmin(app));
 
 /* Routing */
 // Api
