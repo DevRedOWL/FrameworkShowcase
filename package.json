@@ -34,11 +34,12 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "passport-vkontakte": "^0.3.3",
+    "pug": "^3.0.2",
     "redis": "^3.0.2",
     "sequelize": "^6.3.5"
   },
   "scripts": {
-    "checkEnv" : "node Utils/envIntegrityTool.js"
+    "checkEnv": "node Utils/envIntegrityTool.js"
   },
   "devDependencies": {}
 }

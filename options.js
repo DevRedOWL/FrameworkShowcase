@@ -34,9 +34,9 @@ exports.contacts = {
 }
 
 // SSL Options
-exports.ssl = {
-    key: fs.readFileSync('SSL/' + (process.env.NODE_SSL_KEY_NAME ? process.env.NODE_SSL_KEY_NAME : 'certificate.crt')),
-    cert: fs.readFileSync('SSL/' + (process.env.NODE_SSL_CRT_NAME ? process.env.NODE_SSL_CRT_NAME : 'certificate.key')),
+exports.ssl = state.debug ? {} : {
+    key: fs.readFileSync('SSL/' + (process.env.NODE_SSL_KEY_NAME ? process.env.NODE_SSL_KEY_NAME : 'certificate.key')),
+    cert: fs.readFileSync('SSL/' + (process.env.NODE_SSL_CRT_NAME ? process.env.NODE_SSL_CRT_NAME : 'certificate.crt')),
     requestCert: false,
     rejectUnauthorized: false,
 };
